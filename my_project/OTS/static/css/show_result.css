@@ -1,0 +1,144 @@
+
+/* Show result  */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin: 2rem 0;
+  animation: fadeInDown 1s ease;
+}
+
+/* No results message */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Table styling */
+table {
+  width: 90%;
+  margin: 0 auto 3rem;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 1s ease;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+tbody td {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f1f5ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  tbody td::before {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  tbody td:nth-child(1)::before { content: "Date"; }
+  tbody td:nth-child(2)::before { content: "Time"; }
+  tbody td:nth-child(3)::before { content: "Attempt"; }
+  tbody td:nth-child(4)::before { content: "Right"; }
+  tbody td:nth-child(5)::before { content: "Wrong"; }
+  tbody td:nth-child(6)::before { content: "Points"; }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

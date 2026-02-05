@@ -1,0 +1,114 @@
+
+/* Main */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Top header container */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  padding: 1rem 2rem;
+  color: white;
+  animation: slideDown 1s ease-out;
+}
+
+/* Site name animation */
+.sitename h1 {
+  font-size: 1.8rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Menu section */
+.menu {
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Example link style (customize as needed) */
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffe600;
+}
+
+/* Content container */
+.content {
+  padding: 2rem;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .sitename h1 {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

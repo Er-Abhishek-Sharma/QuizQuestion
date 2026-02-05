@@ -1,0 +1,6 @@
+Django==5.1.7
+gunicorn
+pymupdf
+google-generativeai
+python-dotenv
+whitenoise
