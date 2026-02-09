@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+
+{% block title %}OTS - Test Paper{% endblock %}
+
+{% block top %}
+<a href="{% url 'OTS:home' %}">Home</a>
+<a href="{% url 'OTS:logout' %}">Logout</a>
+{% endblock %}
+
+{% block content %}
+<h2>Test Paper</h2>
+
+<form action="{% url 'OTS:calculateResult' %}" method="post">
+  {% csrf_token %}
+
+  {% for question in questions %}
+    <div class="question-block">
+      <p>
+        <strong>
+          Q{{ forloop.counter }}. {{ question.que }}
+        </strong>
+      </p>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="q_{{ question.qid }}" value="a" required>
+          {{ question.a }}
+        </label>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="q_{{ question.qid }}" value="b">
+          {{ question.b }}
+        </label>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="q_{{ question.qid }}" value="c">
+          {{ question.c }}
+        </label>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="radio" name="q_{{ question.qid }}" value="d">
+          {{ question.d }}
+        </label>
+      </div>
+    </div>
+    <hr>
+  {% endfor %}
+
+  <div class="form-actions">
+    <input type="submit" value="Submit Test">
+  </div>
+</form>
+{% endblock %}
+
+

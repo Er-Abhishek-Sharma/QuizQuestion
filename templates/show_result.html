@@ -1,0 +1,44 @@
+
+{% extends 'main.html' %}
+
+{% block title %}OTS - Test Result{% endblock %}
+
+{% block top %}
+  <a href="{% url 'OTS:home' %}">Home</a>
+  <a href="{% url 'OTS:registrationForm' %}">Signup</a>
+  <a href="{% url 'OTS:login' %}">Logout</a>
+{% endblock %}
+
+{% block content %}
+  <h2>Test Results</h2>
+  
+  {% if result %}
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Attempt</th>
+          <th>Right</th>
+          <th>Wrong</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in result %}
+          <tr>
+            <td>{{ r.date }}</td>
+            <td>{{ r.time }}</td>
+            <td>{{ r.attempt }}</td>
+            <td>{{ r.right }}</td>
+            <td>{{ r.wrong }}</td>
+            <td>{{ r.points }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No test results found.</p>
+  {% endif %}
+{% endblock %} 
+

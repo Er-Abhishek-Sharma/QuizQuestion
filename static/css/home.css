@@ -1,0 +1,86 @@
+/* Home */
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Welcome Heading */
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-out;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Button-like links */
+.button-link {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.button-link a {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.button-link a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #0056b3, #0099cc);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .button-link a {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

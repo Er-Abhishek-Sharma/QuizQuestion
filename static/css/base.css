@@ -1,0 +1,235 @@
+
+/* Candidate History */
+
+
+/* report_card.css */
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #2c3e50;
+  animation: fadeIn 1s ease-in-out;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #34495e;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Table styles */
+table {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  animation: fadeIn 1.5s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #555;
+  }
+}
+
+
+
+/* Test Paper */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Page Title */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin: 2rem 0 1.5rem;
+  animation: slideDown 0.8s ease;
+}
+
+/* Message when no data */
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  animation: fadeIn 1s ease;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeInUp 1s ease;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 0.9rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f5f9ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  tbody td {
+    padding: 0.8rem 1rem;
+    position: relative;
+    text-align: left;
+    padding-left: 50%;
+    font-size: 0.95rem;
+  }
+
+  tbody td::before {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #007bff;
+  }
+
+  tbody td:nth-child(1)::before { content: "Date"; }
+  tbody td:nth-child(2)::before { content: "Time"; }
+  tbody td:nth-child(3)::before { content: "Attempt"; }
+  tbody td:nth-child(4)::before { content: "Right"; }
+  tbody td:nth-child(5)::before { content: "Wrong"; }
+  tbody td:nth-child(6)::before { content: "Points"; }
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

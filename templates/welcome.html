@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block title %}Welcome to Online Testing System{% endblock %}
+
+{% block top %}
+<a href="{% url 'OTS:registrationForm' %}">Signup</a>
+<a href="{% url 'OTS:login' %}">Login</a>
+{% endblock %}
+
+{% block content %}
+<div class="welcome-content">
+  <h1>Welcome to the Online Testing System</h1>
+  <p>This platform allows you to test your knowledge by taking quick, randomized quizzes.</p>
+  <p>If you're new, <a href="{% url 'OTS:registrationForm' %}">sign up here</a> to get started.</p>
+  <p>Already have an account? <a href="{% url 'OTS:login' %}">Login here</a>.</p>
+</div>
+{% endblock %}
+
+

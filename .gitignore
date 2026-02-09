@@ -1,0 +1,17 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+# SQLite database
+db.sqlite3
+
+# Virtual environment
+.venv/
+
+# Django media files (uploads)
+media/
+
+# Collected static files
+staticfiles/
+
+

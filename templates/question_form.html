@@ -1,0 +1,31 @@
+<h2>Add Question (Admin Only)</h2>
+{% if success %}
+  <p style="color:green;">Question added successfully!</p>
+{% endif %}
+<form method="post">
+  {% csrf_token %}
+  <label>Question:</label><br>
+  <textarea name="que" required></textarea><br>
+  
+  <label>Option A:</label>
+  <input type="text" name="a" required><br>
+  
+  <label>Option B:</label>
+  <input type="text" name="b" required><br>
+  
+  <label>Option C:</label>
+  <input type="text" name="c" required><br>
+  
+  <label>Option D:</label>
+  <input type="text" name="d" required><br>
+  
+  <label>Correct Answer:</label>
+  <select name="ans" required>
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+    <option value="d">D</option>
+  </select><br><br>
+  
+  <input type="submit" value="Add Question">
+</form>
